@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 
 const Nav = () => {
     return (
-        <Fragment>
-            <nav className="navbar is-info is-fixed-top">
+        
+        <nav className="navbar is-info is-fixed-top">
                 <div className="navbar-brand">
                    
                 </div>
@@ -14,7 +14,6 @@ const Nav = () => {
                     </div>
                 </div>
             </nav>
-        </Fragment>
     )
 }
 
