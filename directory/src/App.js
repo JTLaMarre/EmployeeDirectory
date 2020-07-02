@@ -34,6 +34,16 @@ searched: ""
   console.log(employees)
   this.setState({employees});
 };
+sortName=()=>{
+const employees= this.state.employees.sort(function(a,b){
+    if(a.name.first < b.name.first){
+        return -1;
+    }else{
+        return 1;
+    }
+})
+this.setState({employees})
+};
 
 
   render(){
@@ -62,7 +72,7 @@ searched: ""
                 <table className="table">
                 <tbody>
                 <tr>
-                  <th>name</th>
+                  <th onClick={this.sortName}>name</th>
                   <th>Phone</th>
                   <th>Email</th>
                   <th>Age</th>
