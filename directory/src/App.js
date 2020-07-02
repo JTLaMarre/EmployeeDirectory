@@ -1,19 +1,20 @@
-import React, { Fragment } from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import EmployeeRow from './components/EmployeeRow.js'
+import employees from './employees.json'
 
-const TestEmployee = {
-  name:{
-    first:"Bob",
-    last:"Belcher"
-  },
-  phone: "704-999-9999",
-  email: "test@email.com",
-  age:22
-}
 
-function App() {
+class App extends Component {
+
+  state= {
+employees
+  }
+
+
+
+
+  render(){
   return (
     <div>
     <div className="hero is-primary">
@@ -31,18 +32,22 @@ function App() {
                   <th>Email</th>
                   <th>Age</th>
                 </tr>
-                <EmployeeRow
-                name={TestEmployee.name}
-                phone ={TestEmployee.phone}
-                email = {TestEmployee.email}
-                age ={TestEmployee.age}
-                 />
+                {this.state.employees.map(employee => (
+          <EmployeeRow
+            name={employee.name}
+            phone={employee.phone}
+            email={employee.email}
+            age={employee.dob.age}
+          />
+        ))}
+          
                 </table>
                 </div>
                 
             </div>
     </div>
   );
+  }
 }
 
 export default App;
