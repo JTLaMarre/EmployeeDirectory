@@ -2,6 +2,7 @@ import React from 'react'
 
 const EmployeeRow = (props) => {
     return (
+        
         <tr>
             <th>Name:{props.name.first} {props.name.last}</th>
             <th>Phone:{props.phone}</th>
