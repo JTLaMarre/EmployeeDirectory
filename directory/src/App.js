@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import EmployeeRow from './components/EmployeeRow.js'
 import employees from './employees.json'
@@ -13,21 +12,27 @@ searched: ""
   }
 
   handleInputChange = event => {
-    
-    let value = event.target.value;
+    const value = event.target.value;
     const name = event.target.name;
-
     this.setState({
       [name]: value
     });
   };
 
-
-searchforEmployee = name => {
-  // Filter this.state.friends for friends with an id not equal to the id being removed
-  const emploees = this.state.employeess.filter(employee => employee.name === name);
-  // Set this.state.friends equal to the new friends array
-  this.setState({ employees});
+  handleSearch=event=>{
+    event.preventDefault();
+    let name = (this.state.searched)
+    this.searchforEmployee(name)
+  }
+  
+  
+  searchforEmployee(name) {
+    console.log(this.state.searched)
+  console.log(name)
+  console.log(this.state.employees)
+  const employees = this.state.employees.filter(employee => employee.name.first === name);
+  console.log(employees)
+  this.setState({employees});
 };
 
 
@@ -40,12 +45,13 @@ searchforEmployee = name => {
      <span>Search 
      <input 
      type="text"
-     value ={this.state.searched}
+     value ={this.value}
      onChange={this.handleInputChange}
-     placeholder="search here"
+     placeholder="search by first name here"
+     name="searched"
      >
     </input>
-    <button className="button is-warning">
+    <button className="button is-warning" onClick={this.handleSearch}>
       search
     </button>
      </span>
