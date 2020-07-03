@@ -1,5 +1,5 @@
 ## Employee Directory
-![Generic badge](https://img.shields.io/badge/<Title>-<Employee Directory>-<green>.svg)](https://shields.io/)
+
 
  ## Description
  this is a react run employee directory renders a list of employees and allows the user to sort by first name or search by first name. 
