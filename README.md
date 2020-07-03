@@ -38,8 +38,12 @@ I WANT directory of my emplyoees
 SO THAT easily search for an employee by  name or sort my employees by name
 
 ## ScreenShot
-screenshot here!!!!!s
-![Screenshot]()
+Initial Render
+![Screenshot](./public/EmployScreen1.PNG)
+Searching for "Marie"
+![Screenshot](./public/EmployScreen2.PNG)
+Names Sorted
+![Screenshot](./public/EmployScreen3.PNG)
 ## Github
 profile:JTLaMarre
 email: jacobtlamarre@gmail.com
